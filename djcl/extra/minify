@@ -1,0 +1,3 @@
+#!/bin/sh
+cat encoding.js utf8.js hashing.js aes.js djson.js bn.js rsa.js | java -jar extra/yuicompress.jar --type js >djcl.js
+cat encoding.js hashing.js aes.js djson.js bn.js rsa.js | java -jar extra/yuicompress.jar --type js >djcl_ascii.js

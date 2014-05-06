@@ -1,0 +1,2 @@
+#!/bin/sh
+jsdoc rsa.js bn.js encoding.js aes.js hashing.js -d=doc/ --private

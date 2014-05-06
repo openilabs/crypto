@@ -1,0 +1,30 @@
+[submodule "srp-component"]
+	path = srp-component
+	url = https://github.com/gdkar/srp-component
+[submodule "siphash-js"]
+	path = siphash-js
+	url = https://github.com/gdkar/siphash-js
+[submodule "openpgpjs"]
+	path = openpgpjs
+	url = https://github.com/gdkar/openpgpjs
+[submodule "JSPGP-Stuffs"]
+	path = JSPGP-Stuffs
+	url = https://github.com/gdkar/JSPGP-Stuffs
+[submodule "sjcl"]
+	path = sjcl
+	url = http://github.com/gdkar/sjcl
+[submodule "jwcrypto"]
+	path = jwcrypto
+	url = http://github.com/gdkar/jwcrypto
+[submodule "forge"]
+	path = forge
+	url = https://github.com/gdkar/forge
+[submodule "curve25519-donna"]
+	path = curve25519-donna
+	url = https://github.com/agl/curve25519-donna
+[submodule "curve255js"]
+	path = curve255js
+	url = http://github.com/rev22/curve255js
+[submodule "jsrsasign"]
+	path = jsrsasign
+	url = http://github.com/kjur/jsrsasign

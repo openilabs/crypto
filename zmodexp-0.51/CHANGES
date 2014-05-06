@@ -1,0 +1,11 @@
+19990809
+	version: Zmodexp 0.50, alpha.
+19990811
+	api: exponent is now stored in bytes, not words.
+	api: now doing FPU control-word change only in init.
+	api: zmodexp512() now uses pointer to zmodexp512_tmp.
+	ui: added 512-bit line to speed.
+	internal: checked for SIGILL in tryrdtsc.c.
+	internal: miscellaneous changes.
+	opt: better scheduling for Pentium and Pentium MMX. also helps PII.
+	version: Zmodexp 0.51, alpha.

@@ -1,0 +1,39 @@
+Index: openssl-1.0.1c/crypto/bn/asm/x86_64-gcc.c
+===================================================================
+--- openssl-1.0.1c.orig/crypto/bn/asm/x86_64-gcc.c	2010-02-28 05:38:16.000000000 -0800
++++ openssl-1.0.1c/crypto/bn/asm/x86_64-gcc.c	2013-01-17 20:16:12.000000000 -0800
+@@ -55,7 +55,7 @@
+  *    machine.
+  */
+ 
+-#ifdef _WIN64
++#if defined _WIN64 || !defined __LP64__
+ #define BN_ULONG unsigned long long
+ #else
+ #define BN_ULONG unsigned long
+@@ -192,9 +192,9 @@
+ 	asm (
+ 	"	subq	%2,%2		\n"
+ 	".p2align 4			\n"
+-	"1:	movq	(%4,%2,8),%0	\n"
+-	"	adcq	(%5,%2,8),%0	\n"
+-	"	movq	%0,(%3,%2,8)	\n"
++	"1:	movq	(%q4,%2,8),%0	\n"
++	"	adcq	(%q5,%2,8),%0	\n"
++	"	movq	%0,(%q3,%2,8)	\n"
+ 	"	leaq	1(%2),%2	\n"
+ 	"	loop	1b		\n"
+ 	"	sbbq	%0,%0		\n"
+@@ -215,9 +215,9 @@
+ 	asm (
+ 	"	subq	%2,%2		\n"
+ 	".p2align 4			\n"
+-	"1:	movq	(%4,%2,8),%0	\n"
+-	"	sbbq	(%5,%2,8),%0	\n"
+-	"	movq	%0,(%3,%2,8)	\n"
++	"1:	movq	(%q4,%2,8),%0	\n"
++	"	sbbq	(%q5,%2,8),%0	\n"
++	"	movq	%0,(%q3,%2,8)	\n"
+ 	"	leaq	1(%2),%2	\n"
+ 	"	loop	1b		\n"
+ 	"	sbbq	%0,%0		\n"

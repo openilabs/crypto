@@ -1,0 +1,17 @@
+write non-x86 version: radix 2^24 in float/double
+write versions using MMX, VIS, SSE, et al.
+
+include asm for Pentium and PMMX
+for PMMX, PII, PIII: specialize addlow() and sethigh() to squaring
+for PMMX, PII, PIII: specialize addlow() to eliminate zeroing and copying
+do asm for PPro, PII, PIII
+
+use alternating fp exponents
+
+use better exponentiation methods
+
+write libraries for other input sizes
+use faster multiplication methods
+use faster division methods
+
+speed up init, load, store

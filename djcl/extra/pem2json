@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?
+if(count($argv)<2) die("Usage: {$argv[0]} file.pem\n");
+$f = "file://{$argv[1]}";
+if(!($k = openssl_pkey_get_private($f)))
+ dir("Failed to import private key {$argv[1]}.\n");
+
+$d = openssl_pkey_get_details($k);
+$pk = $d['rsa'];
+foreach($pk as $p=>$v)
+{
+ $pk[$p] = bin2hex($v);
+}
+
+echo json_encode($pk)."\n";
